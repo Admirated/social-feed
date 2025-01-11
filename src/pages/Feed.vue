@@ -146,7 +146,8 @@ textarea {
 	gap: 15px;
 	padding: 0 16px;
 	overflow-y: auto;
-	max-height: 400px;
+	max-height: calc(100vh - 354px);
+	min-height: 240px;
 }
 .publication-empty {
 	text-align: center;

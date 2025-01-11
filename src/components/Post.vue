@@ -7,7 +7,12 @@
 			{{ post.content }}
 		</RouterLink>
 
-		<input type="text" v-model="updatedContent" v-if="isEditMode" />
+		<input
+			type="text"
+			placeholder="write updated content.."
+			v-model="updatedContent"
+			v-if="isEditMode"
+		/>
 		<div class="meta">
 			<span class="date">Published on: {{ formattedCreateDate }}</span>
 			<span
@@ -159,6 +164,15 @@ export default {
 	padding: 15px;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 	position: relative;
+	input {
+		padding: 10px;
+		border: 1px solid var(--primary-color);
+		border-radius: 5px;
+		resize: none;
+		outline: none;
+		margin-bottom: 16px;
+		width: 100%;
+	}
 	.content {
 		display: block;
 		text-decoration: none;
